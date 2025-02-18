@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 body{
     background-color: #0c101c;
@@ -140,7 +141,7 @@ body{
     align-items: center;
 }
 .weather-temp span:nth-child(1){
-    font-size: 100px;
+    font-size: 88px;
     color: #e1e2e4;
 }
 .weather-temp span:nth-child(2){
@@ -158,11 +159,17 @@ body{
     height: 80px;
     margin-left: 40px;
 }
-.weather-desc-text{
+#weather-desc-text{
     border-bottom: 1px solid rgb(96, 93, 93);
     width: 100%;
     padding-bottom: 15px;
+}
+#weather-desc-text span{
+    font-size: 20px;
     color: #bec3cd;
+}
+#weather-desc-text span::first-letter{
+    text-transform: uppercase;
 }
 .date{
     margin-top: 15px;
@@ -189,7 +196,7 @@ body{
 }
 .place-text{
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 100;
     color: #e4e5e8;
 }
 .forecast-box{

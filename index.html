@@ -55,7 +55,7 @@
                     <button id="button"><img src="images/search.png" alt=""></button>
                 </div>
                 <div class="input-bar">
-                    <input type="text" id = "city" placeholder="Enter your city">
+                    <input type="text" id = "city" placeholder="Enter your city" autocomplete="off">
                 </div>
             </div>
             <div class="location">
@@ -69,22 +69,22 @@
                     <div class="now">Now</div>
                     <div class="weather-desc">
                         <div class="weather-temp">
-                            <span id="temp">5</span>
-                            <span>o</span>
-                            <span>C</span>
+                            <span id="temp">--</span>
+                            <span id="temp1"></span>
+                            <span id="temp2"></span>
                         </div>
                         <div class="weather-logo">
                             <img src="images/cloudy.png" alt="">
                         </div>
                     </div>
-                    <div class="weather-desc-text">Broken Clouds</div>
+                    <div id="weather-desc-text">--</div>
                     <div class="date">
                         <img src="images/calendar.png" alt="">
-                        <span class="date-text">Wednesday,1 Mar</span>
+                        <span class="date-text">--</span>
                     </div>
                     <div class="place">
                         <img src="images/location2.png" alt="">
-                        <span class="place-text">London,GB</span>
+                        <span class="place-text">--</span>
                     </div>
                 </div>
                 <div class="forecast-box">
@@ -109,4 +109,5 @@
         </div>
     </div>
 </body>
+<script src="index.js"></script>
 </html>
