@@ -18,6 +18,31 @@ let tf1 = document.querySelector('.tf1')
 let tf2 = document.querySelector('.tf2')
 let tf3 = document.querySelector('.tf3')
 let tf4 = document.querySelector('.tf4')
+let weatherImg = document.querySelector('.weather-desc-img')
+let imgf1 = document.querySelector('.imgf1')
+function setImage(targetElement,descriptionText){
+    if(descriptionText === 'clear sky'){
+        targetElement.setAttribute('src','images/sun.png')
+    }
+    else if(descriptionText.includes('clouds')){
+        targetElement.setAttribute('src','images/cloudy.png')
+    }
+    else if(descriptionText.includes('rain')){
+        targetElement.setAttribute('src','images/rain.png')
+    }
+    else if(descriptionText.includes('drizzle')){
+        targetElement.setAttribute('src','images/drizzle.png')
+    }
+    else if(descriptionText.includes('thunderstorm')){
+        targetElement.setAttribute('src','images/thunder.png')
+    }
+    else if(descriptionText.includes('snow')){
+        targetElement.setAttribute('src','images/snow.png')
+    }
+    else{
+        targetElement.setAttribute('src','images/fog.png')
+    }
+}
 searchButton.addEventListener('click',(event)=>{ 
     event.preventDefault();  //when the submit button is clicked the event related to a button occurs
     let cityName = city.value;
@@ -25,7 +50,7 @@ searchButton.addEventListener('click',(event)=>{
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
     .then((data)=>{
         if(!data.ok){
-            return "City name not found"
+            throw new error('City name not found!')
         }
         return data.json()
         
@@ -33,15 +58,16 @@ searchButton.addEventListener('click',(event)=>{
     .then((weatherData)=>{
         let temperature = Math.floor(weatherData.main.temp)
         let descriptionText = weatherData.weather[0].description
+        setImage(weatherImg,descriptionText)
         let country = weatherData.sys.country
         let timeStamp = weatherData.dt
         let time = new Date(timeStamp * 1000)
         let day = time.toLocaleDateString("en-US",{day:'numeric',month:'short', weekday:'short'})
         console.log(country)
         console.log(descriptionText);
-        temp.innerText = `${temperature}`
-        temp1.innerText = `o`;
-        temp2.innerText = `C`;
+        temp.innerText = `${temperature}°C`
+        // temp1.innerText = `o`;
+        // temp2.innerText = `C`;
         description.innerHTML = `<span>${descriptionText}</span>`;
         place.innerText = `${cityName},${country}`;
         date.innerText = `${day}`
@@ -62,10 +88,14 @@ searchButton.addEventListener('click',(event)=>{
                 let dayF = timeF.toLocaleDateString("en-US",{day:'numeric',month:'short'})
                 return dayF
             })
-            console.log(dateArray)
+            console.log(requiredData)
             let tempArr = requiredData.map((ele)=>{
                 return Math.floor(ele.main.temp)
             })
+            let forecastDescImg = requiredData.map((ele)=>{
+                return ele.weather[0].description
+            })
+            console.log(forecastDescImg)
             console.log(tempArr)
             df1.innerText = `${dateArray[1]}`
             df2.innerText = `${dateArray[2]}`
@@ -75,6 +105,11 @@ searchButton.addEventListener('click',(event)=>{
             tf2.innerText = `${tempArr[2]}°C`
             tf3.innerText = `${tempArr[3]}°C`
             tf4.innerText = `${tempArr[4]}°C`
+            for(let i = 1;i<=forecastDescImg.length-1;i++){
+                const imgId = 'imgf' + i
+                let imgID = document.querySelector(`.${imgId}`)
+                setImage(imgID,forecastDescImg[i])
+            }
 
         })
         fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`)
