@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/animated_bg.css">
     <link rel="shortcut icon" href="images/weather.png" type="image/x-icon">
 </head>
+
 <body>
     <div class="animation">
         <span class="star">.</span>
@@ -55,7 +57,7 @@
                     <button id="button"><img src="images/search.png" alt=""></button>
                 </div>
                 <div class="input-bar">
-                    <input type="text" id = "city" placeholder="Enter your city" autocomplete="off">
+                    <input type="text" id="city" placeholder="Enter your city" autocomplete="off">
                 </div>
             </div>
             <div class="location">
@@ -64,50 +66,105 @@
             </div>
         </nav>
         <div class="main-body">
-            <div class="body-left">
-                <div class="weather-box">
-                    <div class="now">Now</div>
-                    <div class="weather-desc">
-                        <div class="weather-temp">
-                            <span id="temp">--</span>
-                            <span id="temp1"></span>
-                            <span id="temp2"></span>
-                        </div>
-                        <div class="weather-logo">
-                            <img src="images/cloudy.png" alt="">
-                        </div>
-                    </div>
-                    <div id="weather-desc-text">--</div>
-                    <div class="date">
-                        <img src="images/calendar.png" alt="">
-                        <span class="date-text">--</span>
-                    </div>
+            <div class="weather-box">
+                <div class="date-day">
                     <div class="place">
                         <img src="images/location2.png" alt="">
                         <span class="place-text">--</span>
                     </div>
+                    <div class="date">
+                        <img src="images/calendar.png" alt="">
+                        <span class="date-text">--</span>
+                    </div>
                 </div>
-                <div class="forecast-box">
-
+                <div class="weather-desc">
+                    <div class="weather-logo">
+                        <img src="images/snow.png" alt="">
+                    </div>
+                    <div class="weather-temp">
+                        <span id="temp"></span>
+                        <span id="temp1"></span>
+                        <span id="temp2"></span>
+                        <div id="weather-desc-text">--</div>
+                    </div>
                 </div>
-            </div>
-            <div class="body-right">
-                <div class="highlights">
-
+                <div class="extra">
+                    <div class="aqi">
+                        <div class="aqi-logo">
+                            <img src="images/aqi.png" alt="">
+                        </div>
+                        <div class="aqi-value">
+                            <span class="aqi-heading">PM 2.5</span>
+                            <div class="aqi-text">
+                                <span class="aqi-text-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aqi">
+                        <div class="aqi-logo">
+                            <img src="images/humidity.png" alt="">
+                        </div>
+                        <div class="aqi-value">
+                            <p class="aqi-heading">Humidity</p>
+                            <div class="aqi-text">
+                                <span class="humidity-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aqi">
+                        <div class="aqi-logo">
+                            <img src="images/pressure.png" alt="">
+                        </div>
+                        <div class="aqi-value">
+                            <span class="aqi-heading">Pressure</span>
+                            <div class="aqi-text">
+                                <span class="pressure-value"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hourly-forecast">
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
-                    <div class="time"></div>
+                <div class="five-days-forecast">
+                    <div class="day1">
+                        <span class="forecast-day-heading df1"></span>
+                        <div class="aqi-logo">
+                            <img src="images/cloudy.png" alt="">
+                        </div>
+                        <div class="aqi-text">
+                            <span class="aqi-text-value tf1"></span>
+                        </div>
+                    </div>
+                    <div class="day1">
+                        <span class="forecast-day-heading df2"></span>
+                        <div class="aqi-logo">
+                            <img src="images/cloudy.png" alt="">
+                        </div>
+                        <div class="aqi-text">
+                            <span class="aqi-text-value tf2"></span>
+                        </div>
+                    </div>
+                    <div class="day1">
+                        <span class="forecast-day-heading df3"></span>
+                        <div class="aqi-logo">
+                            <img src="images/cloudy.png" alt="">
+                        </div>
+                        <div class="aqi-text">
+                            <span class="aqi-text-value tf3"></span>
+                        </div>
+                    </div>
+                    <div class="day1">
+                        <span class="forecast-day-heading df4"></span>
+                        <div class="aqi-logo">
+                            <img src="images/cloudy.png" alt="">
+                        </div>
+                        <div class="aqi-text">
+                            <span class="aqi-text-value tf4"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="index.js"></script>
+
 </html>
