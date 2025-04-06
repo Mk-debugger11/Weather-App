@@ -21,6 +21,7 @@ let tf4 = document.querySelector('.tf4')
 let weatherImg = document.querySelector('.weather-desc-img')
 let imgf1 = document.querySelector('.imgf1')
 let loader = document.getElementById('loader-overlay');
+let errorScreen = document.querySelector('.error-background')
 function setImage(targetElement,descriptionText){
     if(descriptionText === 'clear sky'){
         targetElement.setAttribute('src','images/sun.png')
@@ -44,13 +45,20 @@ function setImage(targetElement,descriptionText){
         targetElement.setAttribute('src','images/fog.png')
     }
 }
+function errorDisplay(){
+    errorScreen.style.display = 'flex';
+    setTimeout(() => {
+        errorScreen.style.display = 'none';
+    }, 2000);
+}
 const searchFx = (event)=>{  //when the submit button is clicked the event related to a button occurs
     let cityName = city.value;
     //latitude and longitude api
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
     .then((data)=>{
-        if(!data.ok){
-            throw new error('City name not found!')
+        if(data.status === 404){
+            errorDisplay()
+            return
         }
         return data.json()
         

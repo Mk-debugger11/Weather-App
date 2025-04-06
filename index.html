@@ -13,7 +13,20 @@
 <body>
     <div id="loader-overlay" style="display: none;">
         <div class="loader-icon">☀️</div>
-      </div>      
+    </div>
+    <div class="error-background" style="display: none;">
+        <div class="error-box">
+            <div class="loaderFailed">
+                <div class="cross-container">
+                    <div class="cross-line cross1"></div>
+                    <div class="cross-line cross2"></div>
+                </div>
+            </div>
+            <div class="error">
+                <h1>City name not found!</h1>
+            </div>
+        </div>
+    </div>
     <div class="main">
         <nav class="navbar">
             <div class="logo">
@@ -48,7 +61,7 @@
                 </div>
                 <div class="weather-desc">
                     <div class="weather-logo">
-                        <img src="" alt="" class = 'weather-desc-img'>
+                        <img src="" alt="" class='weather-desc-img'>
                     </div>
                     <div class="weather-temp">
                         <span id="temp"></span>
@@ -62,7 +75,7 @@
                 </div>
                 <div class="extra">
                     <div class="aqi">
-                        <div class="aqi-logo">   
+                        <div class="aqi-logo">
                             <img src="images/aqi.png" alt="">
                         </div>
                         <div class="aqi-value">
@@ -141,4 +154,5 @@
     </div>
 </body>
 <script src="index.js"></script>
+
 </html>

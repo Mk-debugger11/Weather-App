@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .error-background {
+            background-color: rgba(12, 16, 28, 0.99);
+            backdrop-filter: blur(3px);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .error-box {
+            background-color: #1f2b42;
+            width: 500px;
+            height: 300px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .error h1 {
+            color: #b1bdd4;
+        }
+
+        .loaderFailed {
+            font-size: 4rem;
+        }
+
+        .cross-container {
+            width: 45px;
+            height: 40px;
+            position: relative;
+            margin: auto;
+        }
+        .cross-line {
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background-color: #bf2224;
+            top: 50%;
+            left: 0;
+            transform-origin: center;
+            border-radius: 2px;
+        }
+        .cross1 {
+            transform: rotate(45deg) scale(0);
+            animation: animateCross1 0.3s ease forwards;
+        }
+        .cross2 {
+            transform: rotate(-45deg) scale(0);
+            animation: animateCross2 0.3s ease 0.1s forwards;
+        }
+        @keyframes animateCross1 {
+            to {
+                transform: rotate(45deg) scale(1);
+            }
+        }
+
+        @keyframes animateCross2 {
+            to {
+                transform: rotate(-45deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="error-background">
+        <div class="error-box">
+            <div class="loaderFailed">
+                <div class="cross-container">
+                    <div class="cross-line cross1"></div>
+                    <div class="cross-line cross2"></div>
+                </div>
+            </div>
+            <div class="error">
+                <h1>City name not found!</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
