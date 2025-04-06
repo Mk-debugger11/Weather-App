@@ -109,4 +109,10 @@
     .logo-img img{
         height: 35px;
     }
+    #temp{
+        font-size: 70px;
+    }
+    .weather-logo img{
+        height: 100px;
+    }
 }
