@@ -280,17 +280,20 @@ body{
     align-items: center;
     z-index: 9999;
   }
-  
-  /* Animated icon */
-  .loader-icon {
+
+.loader-icon {
     font-size: 6rem;
     animation: spin 1.5s linear infinite;
-    color: #facc15; 
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+    color: #facc15;  
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
   
   

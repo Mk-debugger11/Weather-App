@@ -125,7 +125,7 @@ function load(){
     loader.style.display = 'flex';
     setTimeout(()=>{
         searchFx();
-    },1900)
+    },1700)
     setTimeout(()=>{
         loader.style.display = 'none';
     },2000)
