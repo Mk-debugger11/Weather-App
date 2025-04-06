@@ -116,3 +116,23 @@
         height: 100px;
     }
 }
+@media(max-width:320px){
+    .place{
+        width: 150px;
+    }
+    .date{
+        width: 110px;
+    }
+    .place-text{
+        font-size: 14px;
+    }
+    .date-text{
+        font-size: 14px;
+    }
+    #temp{
+        font-size: 60px;
+    }
+    .weather-logo img{
+        height: 85px;
+    }
+}
