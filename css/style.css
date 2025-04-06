@@ -9,7 +9,7 @@ body{
     background-color: #0c101c;
 }
 .main{
-    z-index: 0;
+    z-index: -1;
 }
 .navbar{
     /* border: 2px solid white; */
@@ -267,3 +267,30 @@ body{
     text-align: center;
     color: #e1e1e3;
 }
+#loader-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(26, 32, 45, 0.95); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Animated icon */
+  .loader-icon {
+    font-size: 6rem;
+    animation: spin 1.5s linear infinite;
+    color: #facc15; 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

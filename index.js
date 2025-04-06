@@ -20,6 +20,7 @@ let tf3 = document.querySelector('.tf3')
 let tf4 = document.querySelector('.tf4')
 let weatherImg = document.querySelector('.weather-desc-img')
 let imgf1 = document.querySelector('.imgf1')
+let loader = document.getElementById('loader-overlay');
 function setImage(targetElement,descriptionText){
     if(descriptionText === 'clear sky'){
         targetElement.setAttribute('src','images/sun.png')
@@ -120,12 +121,21 @@ const searchFx = (event)=>{  //when the submit button is clicked the event relat
         
     })
 }
+function load(){
+    loader.style.display = 'flex';
+    setTimeout(()=>{
+        searchFx();
+    },1900)
+    setTimeout(()=>{
+        loader.style.display = 'none';
+    },2000)
+}
 // event listener for click
-searchButton.addEventListener('click',searchFx); 
+searchButton.addEventListener('click',load); 
 
 //event listener for enter key
 city.addEventListener("keydown",(event)=>{
     if (event.key === 'Enter'){
-        searchFx();
+        load();
     }
 })
