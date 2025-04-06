@@ -108,9 +108,8 @@ body{
     align-items: center;
 }
 .weather-box{
-    margin: auto;
-    width: 35vw;
-    height: 500px;
+    width: 516px;
+    height: auto;
     background-color: rgba(32, 43, 61, 0.6);  /* fourth parameter for opacity*/
     border-radius: 20px;
     margin-bottom: 10px;
@@ -121,6 +120,7 @@ body{
     padding: 0 30px;
     padding-top: 30px;
     margin-top: 10vh;
+    padding-bottom: 30px;
 }
 .date-day{
     display: flex;
@@ -155,7 +155,6 @@ body{
     margin-left: 10px;
 }
 #weather-desc-text{
-    
     width: 100%;
     padding-bottom: 15px;
 }
@@ -169,8 +168,7 @@ body{
 .date{
     display: flex;
     align-items: center;
-    position: relative;
-    margin-left: 230px;
+    width: 188px;
 }
 .date img{
     height: 15px;
@@ -184,6 +182,7 @@ body{
 .place{
     display: flex;
     align-items: center;
+    width: 320px;
 }
 .place img{
     height: 15px;
@@ -210,7 +209,8 @@ body{
     align-items: center;
     background-color: #1e2a3e;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 10px;
+    gap: 2px;
 }
 .aqi h1{
     font-size: 25px;
@@ -252,4 +252,14 @@ body{
 }
 .forecast-day-heading{
     color: #b4b2b2;;
+}
+.aqiHeading{
+    width: 100%;
+    margin-top: 10px;
+}
+.aqiHeading h1{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #e1e1e3;
 }

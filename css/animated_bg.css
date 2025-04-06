@@ -1,254 +1,98 @@
-body {
-    background-color: #0c101c;
-    overflow:hidden;
-}
-
-.animation {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.star {
-    color: #fffdfd;
-    font-size: 25px;
-    animation: animate 3s linear infinite;
-}
-
-.star:nth-child(1) {
-    position: relative;
-    left: 10vw;
-    top: 10vh;
-    animation:none;
-}
-.star:nth-child(2) {
-    position: relative;
-    left: 50vw;
-    top: 30vh;
-    animation-delay: 1.4s;
-}
-
-.star:nth-child(3) {
-    position: relative;
-    left: 85vw;
-    top: 25vh;
-    animation-delay: 1.9s;
-}
-
-.star:nth-child(4) {
-    position: relative;
-    left: 10vw;
-    top: 60vh;
-    animation-delay: 2.2s;
-}
-
-.star:nth-child(5) {
-    position: relative;
-    left: 50vw;
-    top: 80vh;
-    animation-delay: 2.6s;
-}
-
-.star:nth-child(6) {
-    position: relative;
-    left: 75vw;
-    top: 60vh;
-    animation-delay: 3s;
-}
-
-.star:nth-child(7) {
-    position: relative;
-    left: 10vw;
-    top: 70vh;
-    animation:none;
-}
-
-.star:nth-child(8) {
-    position: relative;
-    left: 65vw;
-    top: 10vh;
-    animation-delay: 1s;
-}
-
-.star:nth-child(9) {
-    position: relative;
-    left: 30vw;
-    top: 80vh;
-    animation:none;
-}
-
-.star:nth-child(10) {
-    position: relative;
-    left: 80vw;
-    top: 30vh;
-    animation-delay: 1.5s;
-}
-
-.star:nth-child(11) {
-    position: relative;
-    left: 45vw;
-    top: 10vh;
-    animation-delay: 0.4s;
-}
-
-.star:nth-child(12) {
-    position: relative;
-    left: 25vw;
-    top: 50vh;
-    animation-delay: 1.7s;
-}
-
-.star:nth-child(13) {
-    position: relative;
-    left: 60vw;
-    top: 70vh;
-    animation:none;
-}
-
-.star:nth-child(14) {
-    position: relative;
-    left: 20vw;
-    top: 30vh;
-    animation-delay: 2.3s;
-}
-
-.star:nth-child(15) {
-    position: relative;
-    left: 80vw;
-    top: 60vh;
-    animation:none;
-}
-
-.star:nth-child(16) {
-    position: relative;
-    left: 35vw;
-    top: 20vh;
-    animation-delay: 2.7s;
-}
-
-.star:nth-child(17) {
-    position: relative;
-    left: 60vw;
-    top: 40vh;
-    animation-delay: 2.8s;
-}
-
-.star:nth-child(18) {
-    position: relative;
-    left: 70vw;
-    top: 10vh;
-    animation-delay: 3s;
-}
-
-.star:nth-child(19) {
-    position: relative;
-    left: 50vw;
-    top: 90vh;
-    animation:none;
-}
-
-.star:nth-child(20) {
-    position: relative;
-    left: 2vw;
-    top: 24vh;
-    animation-delay: 1.9s;
-}
-
-.star:nth-child(21) {
-    position: relative;
-    left: 40vw;
-    top: 60vh;
-    animation-delay: 0.6s;
-}
-
-.star:nth-child(22) {
-    position: relative;
-    left: 80vw;
-    top: 90vh;
-    animation:none;
-}
-
-.star:nth-child(23) {
-    position: relative;
-    left: 5vw;
-    top: 5vh;
-    animation-delay: 0.8s;
-}
-
-.star:nth-child(24) {
-    position: relative;
-    left: 50vw;
-    top: 5vh;
-    animation-delay: 1.2s;
-}
-
-.star:nth-child(25) {
-    position: relative;
-    left: 95vw;
-    top: 5vh;
-    animation-delay: 1.6s;
-}
-
-.star:nth-child(26) {
-    position: relative;
-    left: 5vw;
-    top: 50vh;
-    animation:none;
-}
-
-.star:nth-child(27) {
-    position: relative;
-    left: 95vw;
-    top: 50vh;
-    animation-delay: 2.4s;
-}
-
-.star:nth-child(28) {
-    position: relative;
-    left: 5vw;
-    top: 95vh;
-    animation-delay: 2.8s;
-}
-
-.star:nth-child(29) {
-    position: relative;
-    left: 50vw;
-    top: 95vh;
-    animation:none;
-}
-
-.star:nth-child(30) {
-    position: relative;
-    left: 5vw;
-    top: 5vh;
-    animation-delay: 0.3s;
-}
-
-.star:nth-child(31) {
-    position: relative;
-    left: 50vw;
-    top: 50vh;
-    animation-delay: 2.2s;
-}
-
-.star:nth-child(32) {
-    position: relative;
-    left: 60vw;
-    top: 80vh;
-    animation:none;
-}
-
-@keyframes animate {
-    0% {
-        opacity: 0;
+@media (max-width:768px) {
+    .search-bar{
+        width: 300px;
+        height: 33px;
     }
-
-    50% {
-        opacity: 1;
+    .logo-img img{
+        height: 30px;
     }
-
-    100% {
-        opacity: 0;
+    .weather-name1,.weather-name2{
+        font-size: 24px;
+    }
+    .input-bar input{
+        font-size: 17px;
+    }
+    .location{
+        width: 90px;
+        height: 30px;
+    }
+    .location-img img{
+        height: 13px;
+    }
+    .location-text{
+        font-size: 15px;
+    }
+}
+@media(max-width:425px){
+    .logo-img img{
+        height: 20px;
+    }
+    .weather-name1,.weather-name2{
+        font-size: 18px;
+    }
+    .location-text{
+        display: none;
+    }
+    .location{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    .location-img img{
+        height: 18px;
+    }
+    .search-bar{
+        width: 180px;
+        height: 33px;
+    }
+    .weather-box{
+        width: 100%;
+    }
+    .place{
+        width: 220px;
+    }
+    .date{
+        width: 120px;
+    }
+    .weather-box{
+        margin-top: 20px;
+    }
+    .main-body{
+        padding: 0 10px;
+    }
+    .date-day{
+        margin-bottom: 20px;
+    }
+    .weather-logo img{
+        height: 110px;
+    }
+    .weather-temp span:nth-child(1){
+        font-size: 80px;
+    }
+    .extra{
+        flex-direction: column;
+        padding-bottom: 5px;
+        margin-top: 5px;
+    }
+    .aqi{
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .aqi-logo img{
+        height: 50px;
+    }
+    .aqi-heading{
+        font-size: 18px;
+    }
+    .five-days-forecast{
+        flex-direction: column;
+    }
+    .day1{
+        width: 100%;
+        margin-bottom: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0px 20px;
     }
 }

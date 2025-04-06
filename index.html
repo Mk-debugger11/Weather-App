@@ -11,40 +11,6 @@
 </head>
 
 <body>
-    <div class="animation">
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-        <span class="star">.</span>
-    </div>
     <div class="main">
         <nav class="navbar">
             <div class="logo">
@@ -79,7 +45,7 @@
                 </div>
                 <div class="weather-desc">
                     <div class="weather-logo">
-                        <img src="images/snow.png" alt="" class = 'weather-desc-img'>
+                        <img src="" alt="" class = 'weather-desc-img'>
                     </div>
                     <div class="weather-temp">
                         <span id="temp"></span>
@@ -88,13 +54,16 @@
                         <div id="weather-desc-text">--</div>
                     </div>
                 </div>
+                <div class="aqiHeading">
+                    <h1>AQI</h1>
+                </div>
                 <div class="extra">
                     <div class="aqi">
-                        <div class="aqi-logo">
+                        <div class="aqi-logo">   
                             <img src="images/aqi.png" alt="">
                         </div>
                         <div class="aqi-value">
-                            <span class="aqi-heading">PM 2.5</span>
+                            <span class="aqi-heading">PM2.5</span>
                             <div class="aqi-text">
                                 <span class="aqi-text-value"></span>
                             </div>
@@ -105,8 +74,8 @@
                             <img src="images/humidity.png" alt="">
                         </div>
                         <div class="aqi-value">
-                            <p class="aqi-heading">Humidity</p>
-                            <div class="aqi-text">
+                            <span class="aqi-heading">Humidity</span>
+                            <div class="aqi-text status">
                                 <span class="humidity-value"></span>
                             </div>
                         </div>
@@ -117,11 +86,14 @@
                         </div>
                         <div class="aqi-value">
                             <span class="aqi-heading">Pressure</span>
-                            <div class="aqi-text">
+                            <div class="aqi-text status">
                                 <span class="pressure-value"></span>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="aqiHeading">
+                    <h1>4 Days forecast</h1>
                 </div>
                 <div class="five-days-forecast">
                     <div class="day1">
