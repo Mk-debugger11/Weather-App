@@ -43,8 +43,7 @@ function setImage(targetElement,descriptionText){
         targetElement.setAttribute('src','images/fog.png')
     }
 }
-searchButton.addEventListener('click',(event)=>{ 
-    event.preventDefault();  //when the submit button is clicked the event related to a button occurs
+const searchFx = (event)=>{  //when the submit button is clicked the event related to a button occurs
     let cityName = city.value;
     //latitude and longitude api
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`)
@@ -120,4 +119,13 @@ searchButton.addEventListener('click',(event)=>{
         });
         
     })
+}
+// event listener for click
+searchButton.addEventListener('click',searchFx); 
+
+//event listener for enter key
+city.addEventListener("keydown",(event)=>{
+    if (event.key === 'Enter'){
+        searchFx();
+    }
 })

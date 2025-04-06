@@ -194,6 +194,9 @@ body{
     font-weight: 100;
     color: #e4e5e8;
 }
+.place-text::first-letter{
+    text-transform: capitalize;
+}
 .extra{
     margin-top: 20px;
     display: flex;
